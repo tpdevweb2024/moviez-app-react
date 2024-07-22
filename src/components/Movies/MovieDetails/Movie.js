@@ -6,7 +6,11 @@ import "./Movie.css";
 export default function Movie(props) {
   return (
     <div className="movie">
-      <MovieThumbnail alt={props.movie.title} src={props.movie.thumbnail_url} />
+      <MovieThumbnail
+        alt={props.movie.title}
+        src={props.movie.thumbnail_url}
+        handleClick={() => alert("image cliquée")}
+      />
       <MovieContent data={props.movie} />
     </div>
   );
